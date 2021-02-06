@@ -1,1 +1,18 @@
-<p>purchase works!</p>
+<div>
+    <p>
+        <span class="p-2">Dolar Exchange Rate: {{CurrencyRateDolar}}</span>
+        <span class="p-2">Real Exchange Rate: {{CurrencyRateReal}}</span>
+    </p>
+    <form #purchaseForm="ngForm" (ngSubmit)="PurchaseCurrencyExchange(purchaseForm);">
+        <div class="form-group">
+            <input class="form-control" type="text" ngModel name="user" placeholder="Enter your userid"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" ngModel name="currency" placeholder="Enter currency code"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="number" ngModel name="amount" placeholder="Enter the amount"/>
+        </div>        
+        <button class="btn btn-primary">Purchase</button>
+    </form>
+</div>

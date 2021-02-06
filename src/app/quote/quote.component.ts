@@ -10,6 +10,7 @@ export class QuoteComponent implements OnInit {
   CurrencyRateDolar: String;
   CurrencyRateReal: String;
   DataService: DataservicesService;
+  
   constructor(private dataService: DataservicesService){
     this.DataService = dataService;
     this.LoadInformation();
@@ -18,9 +19,13 @@ export class QuoteComponent implements OnInit {
   LoadInformation(){
     this.DataService.getCurrencyRate("USD").subscribe(data => {
       this.CurrencyRateDolar = data.toString();        
+    }, error => {
+      console.log(error);
     });
     this.DataService.getCurrencyRate("BRL").subscribe(data => {
       this.CurrencyRateReal = data.toString();        
+    }, error => {
+      console.log(error);
     })
   }
 

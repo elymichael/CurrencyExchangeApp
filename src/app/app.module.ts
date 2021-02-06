@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from "@angular/common/http";
 // Custom component
@@ -26,6 +27,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
     HttpClientModule
   ],
