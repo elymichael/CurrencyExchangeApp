@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CurrencyExchangeApp';
+  public loading: Boolean;
 
+  constructor() {
+    this.loading = false;
+  }
 }

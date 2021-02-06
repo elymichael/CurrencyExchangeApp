@@ -3,6 +3,7 @@
         <span class="p-2">Dolar Exchange Rate: {{CurrencyRateDolar}}</span>
         <span class="p-2">Real Exchange Rate: {{CurrencyRateReal}}</span>
     </p>
+    <div *ngIf="ResultTransaction.length > 0" class="alert alert-success">Transaction sucessfully <b>${{ResultTransaction}}</b></div>    
     <form #purchaseForm="ngForm" (ngSubmit)="PurchaseCurrencyExchange(purchaseForm);">
         <div class="form-group">
             <input class="form-control" type="text" ngModel name="user" placeholder="Enter your userid"/>
